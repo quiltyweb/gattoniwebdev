@@ -6,6 +6,7 @@ class LandingFlowTest < ActionDispatch::IntegrationTest
   test "can see the welcome page" do
     get "/"
     assert_dom "h1", "Work in Progress!"
+    assert_dom "p", "Hello, world!"
   end
 
   test "can see the about page" do
