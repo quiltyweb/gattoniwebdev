@@ -5,7 +5,7 @@ class LandingFlowTest < ActionDispatch::IntegrationTest
   # https://guides.rubyonrails.org/v8.0.0/testing.html#integration-testing
   test "can see the welcome page" do
     get "/"
-    assert_dom "h1", "Work in Progress! wrong"
+    assert_dom "h1", "Work in Progress!"
     assert_dom "p", "Hello, world!"
   end
 
