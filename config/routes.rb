@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get "landing/about" 
   get "landing/contact_us"
   get "landing/projects"
+  get "landing/services", to: "landing#services"
+  get "landing/accessibility_statement", to: "landing#accessibility_statement"
+
   # get "about", to: "landing#about", as: :about
   # get "projects", to: "landing#projects", as: :projects
   # get "contact_us", to: "landing#contact_us", as: :contact_us

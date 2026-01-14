@@ -1,7 +1,24 @@
-<footer class="bg-gray-200 text-black mt-12">
-    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 container">
-        <p class="text-center text-sm md:text-left mb-4 md:mb-0">
-            &copy; 2026 Gattoni Web Development. All rights reserved.
-        </p>
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-300">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col gap-6">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <%= link_to landing_home_path, class: "font-semibold leading-tight" do %>
+          Gattoni<br class="hidden sm:block">Web Studio
+        <% end %>
+      </div>
+
+      <nav aria-label="Footer menu" class="flex gap-6 text-sm flex-wrap">
+        <%= link_to "Request a Quote", landing_contact_us_path, class: "hover:underline" %>
+        <%= link_to "Services", landing_services_path, class: "hover:underline" %>
+        <%= link_to "Projects", landing_projects_path, class: "hover:underline" %>
+        <%= link_to "About", landing_about_path, class: "hover:underline" %>
+        <%= link_to "Accessibility Statement", landing_accessibility_statement_path, class: "hover:underline" %>
+      </nav>
     </div>
+
+    <p class="text-xs text-center text-gray-700">
+      Copyright © 2026 · Made in Melbourne, Australia
+    </p>
+  </div>
 </footer>
