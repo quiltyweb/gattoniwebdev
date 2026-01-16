@@ -1,5 +1,18 @@
-<nav class="bg-gray-800 p-4 shadow-lg">
-  <div class="container mx-auto flex justify-between items-center">
-    <%= link_to 'Gattoni Web Development', root_path, class: 'text-white text-xl font-bold' %>
+<header class="border-b relative">
+  <div class="max-w-7xl mx-auto flex flex-col items-center justify-between px-6 py-4 md:flex-row">
+     <!-- Logo -->
+    <div class="mb-5 md:mb-0">
+      <%= link_to landing_home_path, class: "font-semibold leading-tight" do %>
+        Gattoni Web Studio
+      <% end %>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav aria-label="Primary menu" class="flex flex-col gap-4 text-sm items-center md:flex-row">
+        <%= link_to "Request a Quote", landing_contact_us_path, class: "hover:underline" %>
+        <%= link_to "Services", landing_services_path, class: "hover:underline" %>
+        <%= link_to "Projects", landing_projects_path, class: "hover:underline" %>
+        <%= link_to "About", landing_about_path, class: "hover:underline" %>
+    </nav>
   </div>
-</nav>
+</header>
