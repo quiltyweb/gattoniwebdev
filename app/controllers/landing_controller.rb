@@ -1,7 +1,7 @@
 class LandingController < ApplicationController
 
     def home
-        @welcome_message = "world!"
+        @contact = Contact.new
     end
 
     def about
