@@ -1,18 +1,17 @@
 <header class="border-b relative">
   <div class="max-w-7xl mx-auto flex flex-col items-center justify-between px-6 py-4 md:flex-row">
-     <!-- Logo -->
+    <!-- Logo -->
     <div class="mb-5 md:mb-0">
-      <%= link_to landing_home_path, class: "font-semibold leading-tight" do %>
+      <%= link_to root_path, class: "font-semibold leading-tight" do %>
         Gattoni Web Studio
       <% end %>
     </div>
-
     <!-- Desktop Nav -->
     <nav aria-label="Primary menu" class="flex flex-col gap-4 text-sm items-center md:flex-row">
-        <%= link_to "Request a Quote", landing_contact_us_path, class: "hover:underline" %>
-        <%= link_to "Services", landing_services_path, class: "hover:underline" %>
-        <%= link_to "Projects", landing_projects_path, class: "hover:underline" %>
-        <%= link_to "About", landing_about_path, class: "hover:underline" %>
+      <%= link_to "Request a Quote", "#contact", class: "hover:underline" %>
+      <%= link_to "Services", "#services", class: "hover:underline" %>
+      <%= link_to "Projects", "#project", class: "hover:underline" %>
+      <%= link_to "About", "#about", class: "hover:underline" %>
     </nav>
   </div>
 </header>

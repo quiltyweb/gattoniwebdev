@@ -5,11 +5,11 @@
       Web design & development<br>
       with Accessibility in mind.
     </h1>
-    <%= link_to "Request a Quote", landing_contact_us_path, class: "mt-8 inline-block bg-black text-white px-5 py-3 rounded-full text-sm font-medium hover:opacity-90" %>
+    <%= link_to "Request a Quote", "#contact", class: "mt-8 inline-block bg-black text-white px-5 py-3 rounded-full text-sm font-medium hover:opacity-90" %>
   </div>
 </section>
 <!-- ================= CORE SERVICES ================= -->
-<section class="bg-gray-100" aria-labelledby="core-services-title">
+<section id="services" class="bg-gray-100" aria-labelledby="core-services-title">
   <div class="max-w-7xl mx-auto px-6 py-16">
     <h2 id="core-services-title" class="font-semibold mb-6">Our Core Services</h2>
     <div class="flex flex-col md:flex-row gap-4 mb-6">
@@ -23,13 +23,10 @@
         Shopify Store development
       </div>
     </div>
-    <div class="mt-8 text-right">
-      <%= link_to "Learn more about our services", landing_services_path, class: "text-sm hover:underline" %>
-    </div>
   </div>
 </section>
 <!-- ================= LATEST PROJECT ================= -->
-<section aria-labelledby="latest-project-title">
+<section id="project" aria-labelledby="latest-project-title">
   <div class="max-w-7xl mx-auto px-6 py-16">
     <h2 id="latest-project-title" class="font-semibold mb-6">Our Latest Project</h2>
     <div class="flex flex-col lg:flex-row gap-6">
@@ -51,13 +48,10 @@
         </div>
       </div>
     </div>
-    <div class="mt-8 text-right">
-      <%= link_to "Learn more about our projects", landing_projects_path, class: "text-sm hover:underline" %>
-    </div>
   </div>
 </section>
 <!-- ================= ABOUT ================= -->
-<section class="bg-gray-200" aria-labelledby="our-team-title">
+<section id="about" class="bg-gray-200" aria-labelledby="our-team-title">
   <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col">
     <h2 id="our-team-title" class="font-semibold mb-6">Our Team</h2>
     <div class="flex flex-col lg:flex-row gap-8">
@@ -66,31 +60,12 @@
         <p class="max-w-md font-medium">
           We are a <strong>multidisciplinary team</strong> that design, code and deliver accessible websites.
         </p>
-        <div class="mt-8 text-right">
-          <%= link_to "Learn more about the team", landing_about_path, class: "text-sm hover:underline" %>
-        </div>
       </div>
     </div>
   </div>
 </section>
 <!-- ================= CONTACT ================= -->
-<%# <section aria-labelledby="contact-title">
-  <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col lg:flex-row gap-10">
-    <div class="flex-1">
-      <h2 id="contact-title" class="font-semibold mb-4">Contact Us</h2>
-      <p class="text-sm max-w-sm mb-6 font-medium">
-        Let's have a chat about your projects and ideas!
-      </p>
-    </div>
-    <div class="flex-1 max-w-md flex flex-col gap-4">
-      <div data-controller="hello">
-        contact form in progress..
-      </div>
-    </div>
-  </div>
-</section> %>
-<!-- ================= CONTACT ================= -->
-<section aria-labelledby="contact-title">
+<section id="contact" aria-labelledby="contact-title">
   <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col lg:flex-row gap-10">
     <div class="flex-1 flex flex-col lg:flex-row gap-3 justify-between" >
       <div class="flex-1 flex flex-col" id="contact-form-container" >

@@ -10,18 +10,8 @@ class LandingControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get about path" do
-    get landing_about_path
+  test "should get accessibility_statement" do
+    get landing_accessibility_statement_path
     assert_response :success
   end
-
-  test "should get projects path" do
-    get landing_projects_path
-    assert_response :success
-  end
-
-  test "should get contact path" do
-    get landing_contact_us_path
-    assert_response :success
-  end 
 end

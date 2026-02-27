@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get "landing/home"
-  get "landing/about" 
-  get "landing/contact_us"
-  get "landing/projects"
-  get "landing/services", to: "landing#services"
   get "landing/accessibility_statement", to: "landing#accessibility_statement"
   
   resource :contacts, only: [:create]
