@@ -1,0 +1,10 @@
+<% if @contact.valid? %>
+  <%= turbo_stream.replace "contact_form" do %>
+    <p>Work in progress! Success message goes here...</p>
+  <% end %>
+<% else %>
+  <%= turbo_stream.replace "contact_form" do %>
+    <p>Work in progress! Error message goes here</p>
+    <%= render "form", contact: @contact %>
+  <% end %>
+<% end %>
