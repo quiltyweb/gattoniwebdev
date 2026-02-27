@@ -1,24 +1,43 @@
-# README
+# Gattoni Web Dev
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Our Landing page
 
-Things you may want to cover:
+## Prerequisites
 
-* Ruby version
+Ensure you have the following installed on your system:
 
-* System dependencies
+*   [Ruby](https://www.ruby-lang.org) (`3.2.9`)
+*   [Rails](https://guides.rubyonrails.org/getting_started.html) (`8.1.1`)
+*   A database (not yet needed)
 
-* Configuration
+## Installation
 
-* Database creation
+Follow these steps to get the application running locally:
 
-* Database initialization
+1.  **Clone the repository:**
+    ```bash
+    git clone git@github.com:quiltyweb/gattoniwebdev.git
+    cd gattoniwebdev
+    ```
 
-* How to run the test suite
+2.  **Install the gems:**
+    ```bash
+    bundle install
+    ```
 
-* Services (job queues, cache servers, search engines, etc.)
+3.  **Set up the database:**
+    *   not yet needed, as we aren't persisting record on a db at the moment.
 
-* Deployment instructions
 
-* ...
+## Usage
+
+*   **Start the server:**
+    ```bash
+    bin/dev
+    ```
+    The application will be available at `http://localhost:3000`.
+
+*   **Run the test suite:**
+    ```bash
+    rails test
+    ```
