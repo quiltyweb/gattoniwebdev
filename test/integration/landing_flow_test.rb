@@ -6,20 +6,9 @@ class LandingFlowTest < ActionDispatch::IntegrationTest
   test "can see the welcome page" do
     get "/"
     assert_dom "h1", "Web design & development with Accessibility in mind."
-  end
-
-  test "can see the about page" do
-    get "/landing/about"
-    assert_dom "h1", "About"
-  end
-
-  test "can see the projects page" do
-    get "/landing/projects"
-    assert_dom "h1", "Projects"
-  end
-
-  test "can see the contact us page" do
-    get "/landing/contact_us"
-    assert_dom "h1", "Contact Us"
-  end
- end
+    assert_dom "h2", "Our Core Services"
+    assert_dom "h2", "Our Latest Project"
+    assert_dom "h2", "Our Team"
+    assert_dom "h2", "Contact Us"
+  end 
+end

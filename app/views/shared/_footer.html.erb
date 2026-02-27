@@ -3,20 +3,18 @@
   <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col gap-6">
     <div class="flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-3">
-        <%= link_to landing_home_path, class: "font-semibold leading-tight" do %>
-          Gattoni<br class="hidden sm:block">Web Studio
+        <%= link_to root_path, class: "font-semibold leading-tight" do %>
+          Gattoni<br class="hidden sm:block">
+          Web Studio
         <% end %>
       </div>
-
       <nav aria-label="Footer menu" class="flex gap-6 text-sm flex-wrap">
-        <%= link_to "Request a Quote", landing_contact_us_path, class: "hover:underline" %>
-        <%= link_to "Services", landing_services_path, class: "hover:underline" %>
-        <%= link_to "Projects", landing_projects_path, class: "hover:underline" %>
-        <%= link_to "About", landing_about_path, class: "hover:underline" %>
+        <%= link_to "Services", "#services", class: "hover:underline" %>
+        <%= link_to "Projects", "#project", class: "hover:underline" %>
+        <%= link_to "About", "#about", class: "hover:underline" %>
         <%= link_to "Accessibility Statement", landing_accessibility_statement_path, class: "hover:underline" %>
       </nav>
     </div>
-
     <p class="text-xs text-center text-gray-700">
       Copyright © 2026 · Made in Melbourne, Australia
     </p>
