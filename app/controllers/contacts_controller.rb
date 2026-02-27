@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
- 
+  invisible_captcha only: [:create], honeypot: :subtitle
   def create
     @contact = Contact.new(contact_params)
     if @contact.valid?
