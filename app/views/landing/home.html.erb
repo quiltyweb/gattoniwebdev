@@ -74,7 +74,7 @@
   </div>
 </section>
 <!-- ================= CONTACT ================= -->
-<section aria-labelledby="contact-title">
+<%# <section aria-labelledby="contact-title">
   <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col lg:flex-row gap-10">
     <div class="flex-1">
       <h2 id="contact-title" class="font-semibold mb-4">Contact Us</h2>
@@ -85,6 +85,17 @@
     <div class="flex-1 max-w-md flex flex-col gap-4">
       <div data-controller="hello">
         contact form in progress..
+      </div>
+    </div>
+  </div>
+</section> %>
+<!-- ================= CONTACT ================= -->
+<section aria-labelledby="contact-title">
+  <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col lg:flex-row gap-10">
+    <div class="flex-1 flex flex-col lg:flex-row gap-3 justify-between" >
+      <div class="flex-1 flex flex-col" id="contact-form-container" >
+        <h2 id="contact-title" class="font-semibold mb-4">Contact Us</h2>
+        <%= render "form", contact: @contact %>
       </div>
     </div>
   </div>
