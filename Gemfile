@@ -21,3 +21,5 @@ group :development, :test do
 end
 
 gem "tailwindcss-rails", "~> 4.4"
+gem "importmap-rails"
+gem "stimulus-rails"
