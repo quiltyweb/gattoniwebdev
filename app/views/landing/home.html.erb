@@ -71,6 +71,7 @@
       <div class="flex-1 flex flex-col" id="contact-form-container" >
         <h2 id="contact-title" class="font-semibold mb-4">Contact Us</h2>
         <%= turbo_frame_tag "contact_form" do %>
+          <%= render 'shared/flash_messages' if flash.any? %>
           <%= render "contacts/form", contact: @contact %>
         <% end %>
       </div>

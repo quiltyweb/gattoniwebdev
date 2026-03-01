@@ -5,42 +5,46 @@
                 controller: "contact",
                 action: "submit->contact#submit turbo:submit-end->contact#submitEnd"
               } do |f| %>
+  <%= f.invisible_captcha :subtitle %>
   <div class="form-field">
     <%= f.label :name do %>
-      Name <span class="text-red-500 ml-1" aria-label="Name is required">*</span>
+      Name <span class="text-red-500 ml-1" aria-hidden="true">*</span>
     <% end %>
     <%= f.text_field :name,
+         "aria-required": true,
          class: "w-full border rounded-lg p-2",
           data: {
             action: "blur->contact#validate",
             contact_target: "name"
           } %>
-    <div class="error text-red-500" data-contact-target="nameError"></div>
+    <div class="error text-red-500" aria-live="polite" data-contact-target="nameError"></div>
   </div>
   <div class="form-field">
     <%= f.label :email do %>
-      Email <span class="text-red-500 ml-1" aria-label="Email is required">*</span>
+      Email <span class="text-red-500 ml-1" aria-hidden="true">*</span>
     <% end %>
     <%= f.email_field :email,
+          "aria-required": true,
           class: "w-full border rounded-lg p-2",
           data: {
             action: "blur->contact#validate",
             contact_target: "email"
           } %>
-    <div class="error text-red-500" data-contact-target="emailError"></div>
+    <div class="error text-red-500" aria-live="polite" data-contact-target="emailError"></div>
   </div>
   <div class="form-field">
     <%= f.label :message do %>
       Message
-      <span class="text-red-500 ml-1" aria-label="Message is required">*</span>
+      <span class="text-red-500 ml-1" aria-hidden="true">*</span>
     <% end %>
     <%= f.text_area :message,
+          "aria-required": true,
           class: "w-full border rounded-lg p-2",
           data: {
             action: "blur->contact#validate",
             contact_target: "message"
           } %>
-    <div class="error text-red-500" data-contact-target="messageError"></div>
+    <div class="error text-red-500" aria-live="polite" data-contact-target="messageError"></div>
   </div>
   <%= f.submit "Submit Inquiry", 
   class: "self-end border rounded-full px-6 py-2 text-sm hover:bg-black hover:text-white transition" %>
