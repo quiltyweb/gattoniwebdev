@@ -57,12 +57,15 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "localhost",
-    port: 1025,
-    domain: "localhost",
+    address: Rails.application.credentials.dig(:smtp_config, :address),
+    port: Rails.application.credentials.dig(:smtp_config, :port),
+    domain: Rails.application.credentials.dig(:smtp_config, :domain),
     enable_starttls_auto: false
   }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
+  config.action_mailer.default_url_options = {
+    host: Rails.application.credentials.dig(:smtp_config, :default_url_options, :host), 
+    port: Rails.application.credentials.dig(:smtp_config, :default_url_options, :port)
+  }
 end

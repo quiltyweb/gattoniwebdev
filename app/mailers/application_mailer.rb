@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'contact@gattoniwebdev.com'
+  default from: Rails.application.credentials.mail_to
   layout 'mailer'
 end
 
