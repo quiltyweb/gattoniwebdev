@@ -18,5 +18,11 @@
     <p class="text-xs text-center text-gray-700">
       Copyright © 2026 · Made in Melbourne, Australia
     </p>
+    <p>Current Environment: <%= Rails.env %></p>
+    <% if Rails.application.credentials.dig(:something) %>
+      <p>something is set!</p>
+    <% else %>
+      <p>something is not set!</p>
+    <% end %>
   </div>
 </footer>
