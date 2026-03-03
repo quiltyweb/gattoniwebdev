@@ -54,13 +54,12 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions.
   config.action_controller.raise_on_missing_callback_actions = true
-
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: Rails.application.credentials.dig(:smtp_config, :address),
-    port: Rails.application.credentials.dig(:smtp_config, :port),
-    domain: Rails.application.credentials.dig(:smtp_config, :domain),
-    enable_starttls_auto: false
+  
+  config.action_mailer.delivery_method = :mailtrap
+  config.action_mailer.mailtrap_settings = {
+    api_key: Rails.application.credentials.email_api_key,
+    sandbox: true,
+    inbox_id: Rails.application.credentials.inbox_id
   }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
@@ -68,4 +67,5 @@ Rails.application.configure do
     host: Rails.application.credentials.dig(:smtp_config, :default_url_options, :host), 
     port: Rails.application.credentials.dig(:smtp_config, :default_url_options, :port)
   }
+
 end
