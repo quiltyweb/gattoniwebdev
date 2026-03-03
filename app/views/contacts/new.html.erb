@@ -1,0 +1,14 @@
+<div class="max-w-7xl mx-auto px-6 py-16">
+  <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold max-w-3xl leading-tight">Contact Us</h1>
+  <h2 id="contact-title" class="font-semibold mb-4">(work in progress)</h2>
+  <%= turbo_frame_tag "contact_form" do %>
+    <%= render 'shared/flash_messages' if flash.any? %>
+    <%= render "form", contact: @contact %>
+  <% end %>
+  <p>Current Environment: <%= Rails.env %></p>
+  <% if Rails.application.credentials.dig(:something) %>
+    <p>something is set!</p>
+  <% else %>
+    <p>something is not set!</p>
+  <% end %>
+</div>

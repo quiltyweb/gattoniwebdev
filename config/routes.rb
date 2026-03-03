@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get "landing/home"
   get "landing/accessibility_statement", to: "landing#accessibility_statement"
   
-  resource :contacts, only: [:create]
+  resource :contacts, only: [:create, :new]
   # get "about", to: "landing#about", as: :about
   # get "projects", to: "landing#projects", as: :projects
   # get "contact_us", to: "landing#contact_us", as: :contact_us
