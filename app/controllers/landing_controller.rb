@@ -1,7 +1,6 @@
 class LandingController < ApplicationController
 
     def home
-        @contact = Contact.new
     end
 
     def about

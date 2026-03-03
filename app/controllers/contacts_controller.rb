@@ -1,5 +1,11 @@
 class ContactsController < ApplicationController
+  http_basic_authenticate_with name: Rails.application.credentials.dig(:contact_login, :username), password: Rails.application.credentials.dig(:contact_login, :password), only: :new
+
   invisible_captcha only: [:create], honeypot: :subtitle
+
+  def new
+    @contact = Contact.new
+  end
   def create
     @contact = Contact.new(contact_params)
     if @contact.valid?
