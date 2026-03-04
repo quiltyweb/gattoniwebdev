@@ -68,8 +68,8 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :mailtrap
   config.action_mailer.mailtrap_settings = {
     api_key: Rails.application.credentials.email_api_key,
-    sandbox: true,
-    inbox_id: Rails.application.credentials.inbox_id
+    # sandbox: true,
+    # inbox_id: Rails.application.credentials.inbox_id
   }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
