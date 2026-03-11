@@ -17,5 +17,7 @@ class LandingController < ApplicationController
 
     def accessibility_statement
     end
- 
+    
+    def privacy_policy
+    end
 end
