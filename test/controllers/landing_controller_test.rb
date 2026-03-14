@@ -14,4 +14,9 @@ class LandingControllerTest < ActionDispatch::IntegrationTest
     get landing_accessibility_statement_path
     assert_response :success
   end
+
+   test "should get privacy_policy" do
+    get landing_privacy_policy_path
+    assert_response :success
+  end
 end
