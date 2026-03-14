@@ -11,4 +11,11 @@ class LandingFlowTest < ActionDispatch::IntegrationTest
     assert_dom "h2", "Our Team"
     assert_dom "h2", "Contact Us"
   end 
+
+ 
+
+  test "can see the privacy policy link in the footer" do
+    get "/"
+    assert_dom "footer a", "Privacy Policy"
+  end
 end
