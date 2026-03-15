@@ -67,5 +67,5 @@ Rails.application.configure do
     host: Rails.application.credentials.dig(:smtp_config, :default_url_options, :host), 
     port: Rails.application.credentials.dig(:smtp_config, :default_url_options, :port)
   }
-
+  config.action_mailer.logger = nil
 end
